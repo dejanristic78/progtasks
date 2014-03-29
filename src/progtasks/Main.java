@@ -4,39 +4,16 @@ public class Main {
 
 
     public static void main(String[] args) {
-        bounce3();
-    }
-    private static void bounce3() {
-        int pos = 0;
-        boolean moveUp = true;
+        //Bounce.bounce3();
         
-        while(true) {
-            if(moveUp) {
-                if(pos < 3) {
-                    pos++;
-                }
-                else {
-                    moveUp = false;
-                    pos--;
-                }
-            }
-            else {
-                if(pos > -3) {
-                    pos--;
-                }
-                else {
-                    moveUp = true;
-                    pos++;
-                }
-            }
-            System.out.println("Pos: "+pos);
-            try{
-                Thread.sleep(1000);
-            } catch(Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
+        int[] seq = {1,3,2,7,5,6,2,9,7};
         
+        int[] sortedSeq = Sort.bubbleSort("48693857473658302");
+        
+        for(int a: sortedSeq){System.out.print(a+", ");}
     }
+    
+    
+    
     
 }
